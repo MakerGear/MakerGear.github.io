@@ -214,9 +214,8 @@ function matchConfig() {
 
    const userConfig = [s1, s2, s3, s4, s5];
 
-    const masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1, v3bv2, v3bgt,
-                   sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2, sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt,
-                   revEbm, revEv1, revEv2, revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt, revF];
+    const masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1,                            v3bv2, v3bgt,sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2,                            sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt,revEbm, revEv1, revEv2, 
+                         revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt, revF];
 
     var match;
 
@@ -406,7 +405,7 @@ function matchConfig() {
     } else if (match == 32) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
+            window.location = "http://makergear.wikidot.com/local--files/m2-firmware/M2E-Production-SnNRd-V100_SilverZ.zip";
         } else answer = false;
     } else if (match == 33) {
         answer = confirm("Please click to download your firmware.");
