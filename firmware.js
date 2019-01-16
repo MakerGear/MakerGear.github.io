@@ -11,9 +11,11 @@ function addEventListener(){
     document.getElementById('stp1').addEventListener("click", step1, false); 
 
 }
+
+let answer;
 //gets RevE download
 function revE() {
-    const answer = confirm("Please click to download RevE firmware.");
+     answer = confirm("Please click to download RevE firmware.");
 
     if (answer) {
         window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";
@@ -22,7 +24,7 @@ function revE() {
 
 //gets RevE Dual download
 function dual() {
-    const answer = confirm("Please click to download RevE Dual firmware.");
+     answer = confirm("Please click to download RevE Dual firmware.");
 
     if (answer) {
         window.location = "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
@@ -31,7 +33,7 @@ function dual() {
 
 //gets Rev.F download
 function revf() {
-    const answer = confirm("Please click to download RevF firmware.");
+     answer = confirm("Please click to download RevF firmware.");
 
     if (answer) {
         window.location = "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
@@ -41,7 +43,7 @@ function revf() {
 //Gets Arduino 1.5.5 Windows
 
 function arduino() {
-    const answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+     answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
 
     if (answer) {
         window.location = "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-r2-windows.zip";
@@ -51,7 +53,7 @@ function arduino() {
 //Gets Arduino 1.5.5 MAC
 
 function arduino2() {
-    const answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+     answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
 
     if (answer) {
         window.location = "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-macosx.zip";
@@ -61,7 +63,7 @@ function arduino2() {
 //Gets Arduino 1.5.5 Linux 64 bit
 
 function arduino3() {
-    const answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
+     answer = confirm("Please click to download Arduino 1.5.5.\r\n Contributions are voluntary");
 
     if (answer) {
         window.location = "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-linux64.tgz";
