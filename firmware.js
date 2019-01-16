@@ -70,14 +70,6 @@ function arduino3() {
 
 //shows and hides selector divs
 
-function step1() {
-
-    document.getElementById("1").style.display = "block";
-    document.getElementById("arrows").style.display = "block";
-}
-
-
-
 var step = 1;
 
 function move(direction) {
@@ -107,6 +99,7 @@ function move(direction) {
     else if (direction == "back") {
 
         if (step <= 1){
+            return;
             document.getElementById("1").style.display = "none";
             document.getElementById("arrows").style.display = "none";
                 
@@ -122,14 +115,6 @@ function move(direction) {
     
 
 
-
-
-//hides step 1
-function stepBack() {
-
-    document.getElementById("1").style.display = "none"
-
-}
 
 //constiables for matchconfig()        
 
