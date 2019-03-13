@@ -7,6 +7,7 @@ function addEventListener(){
     document.getElementById('revE').addEventListener("click", revE, false);
     document.getElementById('revEdual').addEventListener("click", dual, false);
     document.getElementById('revF').addEventListener("click", revf, false);
+    document.getElementById('f-g-cooling').addEventListener("click", fgCooling, false);
     //opens selector
     document.getElementById('stp1').addEventListener("click", step1, false); 
 
@@ -65,6 +66,14 @@ function arduino3() {
 
     if (answer) {
         window.location = "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-linux64.tgz";
+    } else answer = false;
+}
+
+function fgCooling() {
+    const answer = confirm("Please click to download V4 F/G cooling upgrade firmware.");
+
+    if (answer) {
+        window.location = "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
     } else answer = false;
 }
 

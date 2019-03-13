@@ -7,24 +7,18 @@ body {
     background-attachment: fixed;
 }
 
-p {
-    font-family: 'Oswald', sans-serif;
-}
 
-h3 {
+h1, h2, h3,h4 p {
     font-family: 'Oswald', sans-serif;
 }
 
 
 h4 {
-    font-family: 'Oswald', sans-serif text-decoration: underline;
-}
-
-h5 {
     font-family: 'Oswald', sans-serif;
+    font-size: 175%;
 }
 
-h5:hover {
+h4:hover {
     color: #FF6300;
 
 }
@@ -116,4 +110,8 @@ pre {
     padding-bottom: 10px;
     color: white;
     background-color: black;
+}
+
+#notice{
+    color: #FF6300;
 }
