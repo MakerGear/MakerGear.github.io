@@ -7,7 +7,8 @@ function addEventListener(){
     document.getElementById('revE').addEventListener("click", revE, false);
     document.getElementById('revEdual').addEventListener("click", dual, false);
     document.getElementById('revF').addEventListener("click", revf, false);
-    document.getElementById('f-g-cooling').addEventListener("click", fgCooling, false);
+    document.getElementById('revG').addEventListener("click", revg, false);
+    document.getElementById('v4Cool').addEventListener("click", v4Cool, false);
     //opens selector
     document.getElementById('stp1').addEventListener("click", step1, false); 
 
@@ -36,6 +37,21 @@ function revf() {
 
     if (answer) {
         window.location = "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
+    } else answer = false;
+}
+
+function revg(){
+    const answer = confirm("Please click to download RevG firmware.");
+
+    if (answer) {
+        window.location = "http://makergear.wikidot.com/local--files/m2-firmware/m2-RevG-firmware.zip";
+    } else answer = false;
+}
+function v4Cool(){
+    const answer = confirm("Please click to download V4 F/G Cooling upgrade firmware.");
+
+    if (answer) {
+        window.location = "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
     } else answer = false;
 }
 
@@ -69,15 +85,15 @@ function arduino3() {
     } else answer = false;
 }
 
-function fgCooling() {
-    const answer = confirm("Please click to download V4 F/G cooling upgrade firmware.");
+//shows and hides selector divs
 
-    if (answer) {
-        window.location = "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
-    } else answer = false;
+function step1() {
+
+    document.getElementById("1").style.display = "block";
+    document.getElementById("arrows").style.display = "block";
 }
 
-//shows and hides selector divs
+
 
 var step = 1;
 
@@ -108,7 +124,6 @@ function move(direction) {
     else if (direction == "back") {
 
         if (step <= 1){
-            return;
             document.getElementById("1").style.display = "none";
             document.getElementById("arrows").style.display = "none";
                 
@@ -124,6 +139,14 @@ function move(direction) {
     
 
 
+
+
+//hides step 1
+function stepBack() {
+
+    document.getElementById("1").style.display = "none"
+
+}
 
 //constiables for matchconfig()        
 
@@ -208,8 +231,9 @@ function matchConfig() {
 
    const userConfig = [s1, s2, s3, s4, s5];
 
-    const masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1,                            v3bv2, v3bgt,sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2,                            sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt,revEbm, revEv1, revEv2, 
-                         revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt, revF];
+    const masterArray = [v4bm, v4v1, v4v2, v4gt, v4dbm, v4dv1, v4dv2, v4dgt, v3bbm, v3bv1, v3bv2, v3bgt,
+                   sv3bbm, sv3bv1, sv3bv2, sv3bgt, sv4bm, sv4v1, sv4v2, sv4gt, sv4dbm, sv4dv1, sv4dv2, sv4dgt,
+                   revEbm, revEv1, revEv2, revEgt, revEdbm, revEdv1, revEdv2, revEdgt, sv4Zm, bv3bgt, revF];
 
     var match;
 
@@ -399,7 +423,7 @@ function matchConfig() {
     } else if (match == 32) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            window.location = "http://makergear.wikidot.com/local--files/m2-firmware/M2E-Production-SnNRd-V100_SilverZ.zip";
+            alert("Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. ");
         } else answer = false;
     } else if (match == 33) {
         answer = confirm("Please click to download your firmware.");

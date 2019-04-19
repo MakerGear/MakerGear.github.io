@@ -5,20 +5,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-
-h1, h2, h3,h4 p {
+    overflow-x: hidden;
     font-family: 'Oswald', sans-serif;
+    background-color: hsla(50, 0%, 90%, 1)
 }
 
 
-h4 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 175%;
-}
-
-h4:hover {
+h3:hover {
     color: #FF6300;
 
 }
@@ -30,6 +23,10 @@ span:hover {
 pre {
     font-family: 'Oswald', sans-serif;
     text-align: center;
+}
+
+select{
+    font-size: 150%;
 }
 
 /*classes*/
@@ -68,6 +65,11 @@ pre {
 
 }
 
+.steps1{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
 
 .center-text {
     text-align: center;
@@ -87,7 +89,6 @@ pre {
     padding: 10px;
 }
 
-
 .hepics {
     padding-top: 15px;
 }
@@ -105,13 +106,36 @@ pre {
     float: left;
 }
 
-#links{
-    padding-top: 1px;
-    padding-bottom: 10px;
-    color: white;
+.links{
+    color: #FF6300;
     background-color: black;
+    padding: 10px;  
 }
 
-#notice{
-    color: #FF6300;
+
+#ard1{
+    padding-left: 55%;
 }
+
+#ard3{
+    padding-right: 55%;
+}
+#exceptions{
+    color: #FF6300;
+    
+}
+
+
+/*media queries*/
+
+@media only screen and (min-width: 736px){
+    
+    #ard1{
+        padding-left: 1%;
+    }
+    #ard3{
+        padding-right: 1%;
+    }
+    
+}
+
