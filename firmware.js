@@ -1,19 +1,5 @@
 
-function addEventListener(){
-    //top section
-    document.getElementById('ard1').addEventListener("click", arduino, false);
-    document.getElementById('ard2').addEventListener("click", arduino2, false);
-    document.getElementById('ard3').addEventListener("click", arduino3, false);
-    document.getElementById('revE').addEventListener("click", revE, false);
-    document.getElementById('revEdual').addEventListener("click", dual, false);
-    document.getElementById('revF').addEventListener("click", revf, false);
-<<<<<<< HEAD
-    document.getElementById('revG').addEventListener("click", revg, false);
-    document.getElementById('v4Cool').addEventListener("click", v4Cool, false);
-=======
->>>>>>> parent of ddce0a5... added V4 F/G cooling
-    //opens selector
-    document.getElementById('stp1').addEventListener("click", step1, false); 
+ 
 
 function addEventListener(){
     //top section
@@ -536,7 +522,7 @@ function arduino3() {
 }
 
 //shows and hides selector divs
-<<<<<<< HEAD
+
 
 function step1() {
 
@@ -545,8 +531,6 @@ function step1() {
 }
 
 
-=======
->>>>>>> parent of ddce0a5... added V4 F/G cooling
 
 var step = 1;
 
