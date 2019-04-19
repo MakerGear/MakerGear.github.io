@@ -5,35 +5,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-<<<<<<< HEAD
     overflow-x: hidden;
-=======
-}
-
-p {
-    font-family: 'Oswald', sans-serif;
-}
-
-h3 {
->>>>>>> parent of ddce0a5... added V4 F/G cooling
     font-family: 'Oswald', sans-serif;
     background-color: hsla(50, 0%, 90%, 1)
 }
 
 
-<<<<<<< HEAD
 h3:hover {
-=======
-h4 {
-    font-family: 'Oswald', sans-serif text-decoration: underline;
-}
-
-h5 {
-    font-family: 'Oswald', sans-serif;
-}
-
-h5:hover {
->>>>>>> parent of ddce0a5... added V4 F/G cooling
     color: #FF6300;
 
 }
@@ -133,7 +111,6 @@ select{
     background-color: black;
     padding: 10px;  
 }
-<<<<<<< HEAD
 
 
 #ard1{
@@ -162,5 +139,3 @@ select{
     
 }
 
-=======
->>>>>>> parent of ddce0a5... added V4 F/G cooling
