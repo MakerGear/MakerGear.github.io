@@ -25,7 +25,7 @@ pre {
     text-align: center;
 }
 
-select {
+select{
     font-size: 150%;
 }
 
@@ -65,7 +65,7 @@ select {
 
 }
 
-.steps1 {
+.steps1{
     padding-top: 70px;
     padding-bottom: 70px;
 }
@@ -106,36 +106,36 @@ select {
     float: left;
 }
 
-.links {
+.links{
     color: #FF6300;
     background-color: black;
-    padding: 10px;
+    padding: 10px;  
 }
 
 
-#ard1 {
+#ard1{
     padding-left: 55%;
 }
 
-#ard3 {
+#ard3{
     padding-right: 55%;
 }
-
-#exceptions {
+#exceptions{
     color: #FF6300;
-
+    
 }
 
 
 /*media queries*/
 
-@media only screen and (min-width: 736px) {
-
-    #ard1 {
+@media only screen and (min-width: 736px){
+    
+    #ard1{
         padding-left: 1%;
     }
-    #ard3 {
+    #ard3{
         padding-right: 1%;
     }
-
+    
 }
+
