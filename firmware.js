@@ -10,7 +10,7 @@ function addEventListener(){
     document.getElementById('revG').addEventListener("click", revg, false);
     document.getElementById('v4Cool').addEventListener("click", v4Cool, false);
     //opens selector
-    document.getElementById('stp1').addEventListener("click", step1, false); 
+     
 
 }
 //gets RevE download
@@ -86,13 +86,6 @@ function arduino3() {
 }
 
 //shows and hides selector divs
-
-function step1() {
-
-    document.getElementById("1").style.display = "block";
-    document.getElementById("arrows").style.display = "block";
-}
-
 
 
 var step = 1;
