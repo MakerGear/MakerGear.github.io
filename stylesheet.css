@@ -119,6 +119,10 @@ select{
     padding: 10px;  
 }
 
+.printer-background{
+    background-color: hsla(50, 0%, 85%, 1);
+}
+
 
 #ard1{
     padding-left: 55%;
@@ -128,9 +132,9 @@ select{
     padding-right: 55%;
 }
 #exceptions{
-    color: #FF6300;
-    
+    color: #FF6300;   
 }
+
 
 
 /*media queries*/
