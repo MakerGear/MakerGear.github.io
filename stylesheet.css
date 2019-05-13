@@ -25,17 +25,19 @@ pre {
     text-align: center;
 }
 
-select{
+select {
     font-size: 150%;
 }
-.step-background-1{
+
+.step-background-1 {
     background-color: white;
 }
 
-.step-background-2{
+.step-background-2 {
     background-color: hsla(50, 0%, 85%, 1);
     padding-bottom: 1px;
 }
+
 /*classes*/
 
 .logo {
@@ -72,7 +74,7 @@ select{
 
 }
 
-.steps1{
+.steps1 {
     padding-top: 70px;
     padding-bottom: 70px;
 }
@@ -113,52 +115,54 @@ select{
     float: left;
 }
 
-.links{
-    
-    background-color:whitesmoke;
-    padding: 10px;  
+.links {
+
+    background-color: whitesmoke;
+    padding: 10px;
 }
 
-.printer-background{
+.printer-background {
     background-color: hsla(50, 0%, 85%, 1);
 }
-.selector-color{
+
+.selector-color {
     color: #FF6300;
     font-size: 250%;
 }
 
-.selector-color:hover{
-    color:  hsla(50, 0%, 25%, 1);
+.selector-color:hover {
+    color: hsla(50, 0%, 25%, 1);
 }
 
 
-#ard1{
+#ard1 {
     padding-left: 55%;
 }
 
-#ard3{
+#ard3 {
     padding-right: 55%;
 }
-#exceptions{
-    color: #FF6300; 
+
+#exceptions {
+    color: #FF6300;
 }
-#q-links{
-    background-color:  hsla(50, 0%, 85%, 1);
-    padding:.02%;
+
+#q-links {
+    background-color: hsla(50, 0%, 85%, 1);
+    padding: .02%;
 }
 
 
 
 /*media queries*/
 
-@media only screen and (min-width: 736px){
-    
-    #ard1{
+@media only screen and (min-width: 736px) {
+
+    #ard1 {
         padding-left: 1%;
     }
-    #ard3{
+    #ard3 {
         padding-right: 1%;
     }
-    
-}
 
+}
