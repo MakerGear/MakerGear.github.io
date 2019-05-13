@@ -133,6 +133,14 @@ select {
 .selector-color:hover {
     color: hsla(50, 0%, 25%, 1);
 }
+.arrow-pos-b{
+    padding-right: 10px;
+    
+}
+
+.arrow-pos-f{
+    padding-left: 10px;
+}
 
 
 #ard1 {
@@ -151,6 +159,8 @@ select {
     background-color: hsla(50, 0%, 85%, 1);
     padding: .02%;
 }
+
+
 
 
 
