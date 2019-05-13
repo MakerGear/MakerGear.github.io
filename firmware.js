@@ -8,8 +8,7 @@ function addEventListener() {
     document.getElementById("revF").addEventListener("click", revf, false);
     document.getElementById("revG").addEventListener("click", revg, false);
     document.getElementById("v4Cool").addEventListener("click", v4Cool, false);
-    //opens selector
-    document.getElementById("stp1").addEventListener("click", step1, false);
+    
 }
 //gets RevE download
 function revE() {
@@ -99,6 +98,7 @@ function arduino3() {
             "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-linux64.tgz";
     } else answer = false;
 }
+
 
 
 var step = 1;
