@@ -122,6 +122,14 @@ select{
 .printer-background{
     background-color: hsla(50, 0%, 85%, 1);
 }
+.selector-color{
+    color: #FF6300;
+    font-size: 250%;
+}
+
+.selector-color:hover{
+    color:  hsla(50, 0%, 25%, 1);
+}
 
 
 #ard1{
@@ -132,7 +140,11 @@ select{
     padding-right: 55%;
 }
 #exceptions{
-    color: #FF6300;   
+    color: #FF6300; 
+}
+#q-links{
+    background-color:  hsla(50, 0%, 85%, 1);
+    padding:.02%;
 }
 
 
