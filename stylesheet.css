@@ -1,4 +1,7 @@
 /*css for main page */
+html {
+	scroll-behavior: smooth;
+}
 
 body {
     padding: ;
