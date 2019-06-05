@@ -1,6 +1,6 @@
 /*css for main page */
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +12,6 @@ body {
     font-family: 'Oswald', sans-serif;
     background-color: hsla(50, 0%, 85%, 1);
 }
-
 
 .link-hover:hover {
     color: #FF6300;
@@ -136,15 +135,34 @@ select {
 .selector-color:hover {
     color: hsla(50, 0%, 25%, 1);
 }
-.arrow-pos-b{
+
+.arrow-pos-b {
     padding-right: 10px;
-    
+
 }
 
-.arrow-pos-f{
+.arrow-pos-f {
     padding-left: 10px;
 }
 
+.two-col-left {
+    float: right;
+    padding-right: 1%;
+}
+
+.two-col-right {
+    float: left;
+    padding-left: 1%;
+}
+
+
+#endstop-align-bottom {
+    padding-left: 15px;
+}
+
+#endstop-align-top {
+    padding-left: 35px;
+}
 
 #ard1 {
     padding-left: 55%;
@@ -163,6 +181,11 @@ select {
     padding: .02%;
 }
 
+#viki-1 {}
+
+#viki-2 {}
+
+#geeetech {}
 
 
 
@@ -174,6 +197,7 @@ select {
     #ard1 {
         padding-left: 1%;
     }
+
     #ard3 {
         padding-right: 1%;
     }

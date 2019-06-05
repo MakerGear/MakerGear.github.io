@@ -8,7 +8,7 @@ function addEventListener() {
     document.getElementById("revF").addEventListener("click", revf, false);
     document.getElementById("revG").addEventListener("click", revg, false);
     document.getElementById("v4Cool").addEventListener("click", v4Cool, false);
-    
+
 }
 //gets RevE download
 function revE() {
@@ -189,13 +189,34 @@ const revEdv1 = [0, 0, 0, 1, 1];
 const revEdv2 = [0, 0, 0, 1, 2];
 const revEdgt = [0, 0, 0, 1, 3];
 
+//Rev f section
+const revFbm = [0, 0, 0, 3, 0]; //Rev F Firmware
+const revFv1 = [0, 0, 0, 3, 1]; //Viki1
+const revFv2 = [0, 0, 0, 3, 2]; //Viki2
+const revFgt = [0, 0, 0, 3, 3]; //Geetech
+
+//Rev G section
+const revGbm = [0, 0, 0, 4, 0]; //Rev G Firmware
+const revGv1 = [0, 0, 0, 4, 1]; //Viki1
+const revGv2 = [0, 0, 0, 4, 2]; //Viki2
+const revGgt = [0, 0, 0, 4, 3]; //Geetech
+
+//Rev H section
+const revHbm = [0, 0, 0, 5, 0]; //Rev H Firmware
+const revHv1 = [0, 0, 0, 5, 1]; //Viki1
+const revHv2 = [0, 0, 0, 5, 2]; //Viki2
+const revHgt = [0, 0, 0, 5, 3]; //Geetech
+
 // Nonstandard configs
 const sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
 const bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
-const revF = [0, 0, 0, 3, 0]; //Rev F Firmware
-const revFgt = [0, 0, 0, 3, 3]; //Rev F Firmware
-const revG = [0, 0, 0, 4, 0]; //Rev F Firmware
-const revGgt = [0, 0, 0, 4, 3]; //Rev F Firmware
+
+//v4 F/G cooling upgrade
+const v4CoolBm = [1, 0, 1, 0, 0]; //Base Model:
+const v4Coolv1 = [1, 0, 1, 5, 1]; //Viki1
+const v4Coolv2 = [1, 0, 1, 5, 2]; //Viki2
+const v4Coolgt = [1, 0, 1, 5, 3]; //Geetech 
+
 
 
 
@@ -219,45 +240,57 @@ function matchConfig() {
     const userConfig = [s1, s2, s3, s4, s5];
 
     const masterArray = [
-    v4bm,//0
-    v4v1,//1
-    v4v2,//2
-    v4gt,//3
-    v4dbm,//4
-    v4dv1,//5
-    v4dv2,//6
-    v4dgt,//7
-    v3bbm,//8
-    v3bv1,//9
-    v3bv2,//10
-    v3bgt,//11
-    sv3bbm,//12
-    sv3bv1,//13
-    sv3bv2,//14
-    sv3bgt,//15
-    sv4bm,//16
-    sv4v1,//17
-    sv4v2,//18
-    sv4gt,//19
-    sv4dbm,//20
-    sv4dv1,//21
-    sv4dv2,//22
-    sv4dgt,//23
-    revEbm,//24
-    revEv1,//25
-    revEv2,//26
-    revEgt,//27
-    revEdbm,//28
-    revEdv1,//29
-    revEdv2,//30
-    revEdgt,//31
-    sv4Zm,//32
-    bv3bgt,//33
-    revF,//34
-    revFgt,//35
-    revG,//36
-    revGgt//37
-  ];
+        v4bm, //0  Test numbers
+        v4v1, //1
+        v4v2, //2
+        v4gt, //3
+        v4dbm, //4
+        v4dv1, //5
+        v4dv2, //6
+        v4dgt, //7
+        v3bbm, //8
+        v3bv1, //9
+        v3bv2, //10
+        v3bgt, //11
+        sv3bbm, //12
+        sv3bv1, //13
+        sv3bv2, //14
+        sv3bgt, //15
+        sv4bm, //16
+        sv4v1, //17
+        sv4v2, //18
+        sv4gt, //19
+        sv4dbm, //20
+        sv4dv1, //21
+        sv4dv2, //22
+        sv4dgt, //23
+        revEbm, //24
+        revEv1, //25
+        revEv2, //26
+        revEgt, //27
+        revEdbm, //28
+        revEdv1, //29
+        revEdv2, //30
+        revEdgt, //31
+        sv4Zm, //32
+        bv3bgt, //33
+        revFbm, //34-------------Start here for reassignment of tests-------------
+        revFv1, //35
+        revFv2, //36
+        revFgt, //37 same as 34
+        revG, //38
+        revGv1, //39
+        revGv2, //40
+        revGgt, //41 same as 38
+        revHbm, //42
+        revHv1, //43
+        revHv2, //44
+        revHgt, //45 same as 42
+        v4CoolBm, //46
+        v4Coolv1, //47
+        v4Coolv2, //48
+        v4Coolgt, //49 same as 46
+    ];
 
     var match;
 
@@ -284,34 +317,26 @@ function matchConfig() {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 1) {
+    } else if (match == 1) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 2) {
+    } else if (match == 2) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 3) {
+    } else if (match == 3) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2%20Marlin%20-%20Geeetech%20LCD%20-%20Black%20Z%20Motor%20-%2010-19-2015.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 4) {
+    } else if (match == 4) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
@@ -324,281 +349,299 @@ function matchConfig() {
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 6) {
+    } else if (match == 6) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 7) {
+    } else if (match == 7) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 8) {
+    } else if (match == 8) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-11-30-2015.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 9) {
+    } else if (match == 9) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 10) {
+    } else if (match == 10) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 11) {
+    } else if (match == 11) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 12) {
+    } else if (match == 12) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin24r2.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 13) {
+    } else if (match == 13) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_942013.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 14) {
+    } else if (match == 14) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 15) {
+    } else if (match == 15) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 " http://makergear.wikidot.com/local--files/m2-lcd-panel/M2_Marlin_RRDSC_v1.0.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 16) {
+    } else if (match == 16) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 " http://makergear.wdfiles.com/local--files/m2-firmware/M2Marlin-01-14-2016-OriginalZMotor.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 17) {
+    } else if (match == 17) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-lcd-panel/M2_LCD_Firmware_24Vw24Vheater.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 18) {
+    } else if (match == 18) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 19) {
+    } else if (match == 19) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wikidot.com/local--files/m2-lcd-panel/M2_Marlin_RRDSC_v1.0.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 20) {
+    } else if (match == 20) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 21) {
+    } else if (match == 21) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 22) {
+    } else if (match == 22) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 23) {
+    } else if (match == 23) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 24) {
+    } else if (match == 24) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 25) {
+    } else if (match == 25) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 26) {
+    } else if (match == 26) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 27) {
+    } else if (match == 27) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V100.zip";
         } else answer = false;
-    }
-    
-    else if (match == 28) {
+    } else if (match == 28) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 29) {
+    } else if (match == 29) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V104%20-%20Dual%20-%20Viki.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 30) {
+    } else if (match == 30) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 31) {
+    } else if (match == 31) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
         } else answer = false;
-    } 
-    
-    else if (match == 32) {
+    } else if (match == 32) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 33) {
+    } else if (match == 33) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         } else answer = false;
-    } 
-    
-    else if (match == 34) {
+    } else if (match == 34) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
         } else answer = false;
-    }
-    
-    else if (match == 35) {
+    } else if (match == 35) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The Rev F printer is not compatible with the VIKI LCD."
+            );
+        } else answer = false;
+    } else if (match == 36) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The Rev F printer is not compatible with the VIKI 2 LCD."
+            );
+        } else answer = false;
+    } else if (match == 37) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
                 "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
         } else answer = false;
-    }
-    
-    else if (match == 36) {
+    } else if (match == 38) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
-                "https://github.com/MakerGear/m2firmware/archive/IZIYq.zip";
+                "http://makergear.wikidot.com/local--files/m2-firmware/m2-RevG-firmware.zip";
         } else answer = false;
-    }
-    
-    else if (match == 37) {
+    } else if (match == 39) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The Rev G printer is not compatible with the VIKI LCD."
+            );
+        } else answer = false;
+    } else if (match == 40) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The Rev G printer is not compatible with the VIKI 2 LCD."
+            );
+        } else answer = false;
+    } else if (match == 41) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
-                "https://github.com/MakerGear/m2firmware/archive/IZIYq.zip";
+                "http://makergear.wikidot.com/local--files/m2-firmware/m2-RevG-firmware.zip";
+        } else answer = false;
+    } else if (match == 42) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location =
+                "https://github.com/MakerGear/m2firmware/archive/vm4jL.zip";
+        } else answer = false;
+    } else if (match == 43) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The Rev H printer is not compatible with the VIKI LCD."
+            );
+        } else answer = false;
+    } else if (match == 44) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The Rev H printer is not compatible with the VIKI 2 LCD."
+            );
+        } else answer = false;
+    } else if (match == 45) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location =
+                "hhttps://github.com/MakerGear/m2firmware/archive/vm4jL.zip";
+        } else answer = false;
+    } else if (match == 46) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location =
+                "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
+        } else answer = false;
+    } else if (match == 47) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The v4 F/G cooling upgrade is not compatible with the VIKI LCD."
+            );
+        } else answer = false;
+    } else if (match == 48) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "The v4 F/G cooling upgrade is not compatible with the VIKI 2 LCD."
+            );
+        } else answer = false;
+    } else if (match == 49) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location =
+                "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
         } else answer = false;
     }
-      
-}//end matchconfig();
-    
-    
+
+
+
+} //end matchconfig();
+
+
 //Magnify Images
 $(".zoom1").elevateZoom({
     zoomWindowPosition: 10
