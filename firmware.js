@@ -7,7 +7,7 @@ function addEventListener() {
     document.getElementById("revEdual").addEventListener("click", dual, false);
     document.getElementById("revF").addEventListener("click", revf, false);
     document.getElementById("revG").addEventListener("click", revg, false);
-    document.getElementById("v4Cool").addEventListener("click", v4Cool, false);
+    document.getElementById("v4f/g").addEventListener("click", v4Cool, false);
 
 }
 //gets RevE download
@@ -493,17 +493,18 @@ function matchConfig() {
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         }
+    }
 
 
 
-    } //end matchconfig();
+} //end matchconfig();
 
 
-    //Magnify Images
-    $(".zoom1").elevateZoom({
-        zoomWindowPosition: 10
-    });
+//Magnify Images
+$(".zoom1").elevateZoom({
+    zoomWindowPosition: 10
+});
 
-    $(".zoom2").elevateZoom({
-        zoomWindowPosition: 2
-    });
+$(".zoom2").elevateZoom({
+    zoomWindowPosition: 2
+});
