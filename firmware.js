@@ -189,33 +189,11 @@ const revEdv1 = [0, 0, 0, 1, 1];
 const revEdv2 = [0, 0, 0, 1, 2];
 const revEdgt = [0, 0, 0, 1, 3];
 
-//Rev f section
-const revFbm = [0, 0, 0, 3, 0]; //Rev F Firmware
-const revFv1 = [0, 0, 0, 3, 1]; //Viki1
-const revFv2 = [0, 0, 0, 3, 2]; //Viki2
-const revFgt = [0, 0, 0, 3, 3]; //Geetech
-
-//Rev G section
-const revGbm = [0, 0, 0, 4, 0]; //Rev G Firmware
-const revGv1 = [0, 0, 0, 4, 1]; //Viki1
-const revGv2 = [0, 0, 0, 4, 2]; //Viki2
-const revGgt = [0, 0, 0, 4, 3]; //Geetech
-
-//Rev H section
-const revHbm = [0, 0, 0, 5, 0]; //Rev H Firmware
-const revHv1 = [0, 0, 0, 5, 1]; //Viki1
-const revHv2 = [0, 0, 0, 5, 2]; //Viki2
-const revHgt = [0, 0, 0, 5, 3]; //Geetech
-
 // Nonstandard configs
 const sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
 const bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
 
-//v4 F/G cooling upgrade
-const v4CoolBm = [1, 0, 1, 0, 0]; //Base Model:
-const v4Coolv1 = [1, 0, 1, 5, 1]; //Viki1
-const v4Coolv2 = [1, 0, 1, 5, 2]; //Viki2
-const v4Coolgt = [1, 0, 1, 5, 3]; //Geetech 
+
 
 
 
@@ -273,23 +251,7 @@ function matchConfig() {
         revEdv2, //30
         revEdgt, //31
         sv4Zm, //32
-        bv3bgt, //33
-        revFbm, //34-------------Start here for reassignment of tests-------------
-        revFv1, //35
-        revFv2, //36
-        revFgt, //37 same as 34
-        revG, //38
-        revGv1, //39
-        revGv2, //40
-        revGgt, //41 same as 38
-        revHbm, //42
-        revHv1, //43
-        revHv2, //44
-        revHgt, //45 same as 42
-        v4CoolBm, //46
-        v4Coolv1, //47
-        v4Coolv2, //48
-        v4Coolgt, //49 same as 46
+        bv3bgt //33
     ];
 
     var match;
@@ -530,123 +492,18 @@ function matchConfig() {
             alert(
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
-        } else answer = false;
-    } else if (match == 34) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
-        } else answer = false;
-    } else if (match == 35) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The Rev F printer is not compatible with the VIKI LCD."
-            );
-        } else answer = false;
-    } else if (match == 36) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The Rev F printer is not compatible with the VIKI 2 LCD."
-            );
-        } else answer = false;
-    } else if (match == 37) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "https://github.com/MakerGear/m2firmware/archive/AQB3f.zip";
-        } else answer = false;
-    } else if (match == 38) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "http://makergear.wikidot.com/local--files/m2-firmware/m2-RevG-firmware.zip";
-        } else answer = false;
-    } else if (match == 39) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The Rev G printer is not compatible with the VIKI LCD."
-            );
-        } else answer = false;
-    } else if (match == 40) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The Rev G printer is not compatible with the VIKI 2 LCD."
-            );
-        } else answer = false;
-    } else if (match == 41) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "http://makergear.wikidot.com/local--files/m2-firmware/m2-RevG-firmware.zip";
-        } else answer = false;
-    } else if (match == 42) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "https://github.com/MakerGear/m2firmware/archive/vm4jL.zip";
-        } else answer = false;
-    } else if (match == 43) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The Rev H printer is not compatible with the VIKI LCD."
-            );
-        } else answer = false;
-    } else if (match == 44) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The Rev H printer is not compatible with the VIKI 2 LCD."
-            );
-        } else answer = false;
-    } else if (match == 45) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "hhttps://github.com/MakerGear/m2firmware/archive/vm4jL.zip";
-        } else answer = false;
-    } else if (match == 46) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
-        } else answer = false;
-    } else if (match == 47) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The v4 F/G cooling upgrade is not compatible with the VIKI LCD."
-            );
-        } else answer = false;
-    } else if (match == 48) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            alert(
-                "The v4 F/G cooling upgrade is not compatible with the VIKI 2 LCD."
-            );
-        } else answer = false;
-    } else if (match == 49) {
-        answer = confirm("Please click to download your firmware.");
-        if (answer) {
-            window.location =
-                "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
-        } else answer = false;
-    }
+        }
 
 
 
-} //end matchconfig();
+    } //end matchconfig();
 
 
-//Magnify Images
-$(".zoom1").elevateZoom({
-    zoomWindowPosition: 10
-});
+    //Magnify Images
+    $(".zoom1").elevateZoom({
+        zoomWindowPosition: 10
+    });
 
-$(".zoom2").elevateZoom({
-    zoomWindowPosition: 2
-});
+    $(".zoom2").elevateZoom({
+        zoomWindowPosition: 2
+    });
