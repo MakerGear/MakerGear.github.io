@@ -492,9 +492,8 @@ function matchConfig() {
     } else if (match == 32) {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
-            alert(
-                "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
-            );
+            window.location =
+                "http://makergear.wikidot.com/local--files/m2-firmware/M2E-Production-SnNRd-V100_SilverZ.zip";
         } else answer = false;
     } else if (match == 33) {
         answer = confirm("Please click to download your firmware.");
