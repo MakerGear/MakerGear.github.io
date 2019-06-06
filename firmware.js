@@ -7,6 +7,7 @@ function addEventListener() {
     document.getElementById("revEdual").addEventListener("click", dual, false);
     document.getElementById("revF").addEventListener("click", revf, false);
     document.getElementById("revG").addEventListener("click", revg, false);
+    document.getElementById("revH").addEventListener("click", revh, false);
     document.getElementById("v4f/g").addEventListener("click", v4Cool, false);
 
 }
@@ -32,7 +33,7 @@ function dual() {
 
 //gets Rev.F download
 function revf() {
-    const answer = confirm("Please click to download RevF firmware.");
+    const answer = confirm("Please click to download Rev F firmware.");
 
     if (answer) {
         window.location =
@@ -41,11 +42,20 @@ function revf() {
 }
 
 function revg() {
-    const answer = confirm("Please click to download RevG firmware.");
+    const answer = confirm("Please click to download Rev G firmware.");
 
     if (answer) {
         window.location =
             "http://makergear.wikidot.com/local--files/m2-firmware/m2-RevG-firmware.zip";
+    } else answer = false;
+}
+
+function revh() {
+    const answer = confirm("Please click to download Rev H firmware.");
+
+    if (answer) {
+        window.location =
+            "https://github.com/MakerGear/m2firmware/archive/vm4jL.zip";
     } else answer = false;
 }
 

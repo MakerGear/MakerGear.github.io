@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    padding: ;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -181,18 +180,11 @@ select {
     padding: .02%;
 }
 
-#viki-1 {}
-
-#viki-2 {}
-
-#geeetech {}
-
-
 
 
 /*media queries*/
 
-@media only screen and (min-width: 736px) {
+@media only screen and (max-width: 991px) {
 
     #ard1 {
         padding-left: 1%;
@@ -200,6 +192,16 @@ select {
 
     #ard3 {
         padding-right: 1%;
+    }
+
+    .two-col-left {
+        float: none;
+        padding: .02%;
+    }
+
+    .two-col-right {
+        float: none;
+        padding: .02%;
     }
 
 }
