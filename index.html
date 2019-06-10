@@ -24,9 +24,6 @@
         <h1 class="greet"><strong>MakerGear M2 Firmware Page</strong></h1>
     </div>
 
-
-
-
     <!--Arduino-->
     <section class="container">
         <br>
@@ -81,13 +78,11 @@
                 </div>
             </div>
         </div>
-
     </section>
     <br>
     <br>
     <br>
     <br>
-
     <section class="step-background-1">
         <br>
         <center>
@@ -105,7 +100,6 @@
                 </center>
             </div>
 
-
             <div class="col-md-6">
                 <center>
                     <h3> For older printers, please try our</h3>
@@ -119,10 +113,10 @@
                 </a>
                 <br>
             </div>
-
-
         </div>
+        <br>
     </section>
+
     <section class="printer-background tutorial">
         <br>
         <center>
@@ -131,13 +125,9 @@
         <br>
         <br>
 
-
-
-
         <!--Rev.E-->
 
         <div class="row">
-
             <div class="col-md-6  printer-background ">
                 <br>
                 <div class="center-text two-col-left">
@@ -208,9 +198,12 @@
     <br>
     <br>
     <br>
+    <center>
+        <h2 id="exceptions">The selector is for Rev E and earlier printers only and <br>
+            will not work for the V4 F/G cooling upgrade or later revisions.</h2>
+    </center>
     <br>
-
-
+    <br>
     <!--Step 1-->
 
     <div id="1" class="selector">
@@ -234,7 +227,6 @@
         </div>
     </div>
 
-
     <!--Step 2-->
     <div id="2" class="selector" style="display: none;">
         <div class="row center-text">
@@ -251,7 +243,6 @@
             </div>
         </div>
     </div>
-
 
     <!--Step 3-->
     <div id="3" class="selector" style="display: none;">
@@ -287,26 +278,22 @@
         <center>
             <h2><strong>Select your Hotend</strong></h2>
         </center>
-
-
         <div class="row">
             <div class="col-md-6 ">
                 <div class="center-text two-col-left">
-                    <h4>V4 hotend</h4><br>
+                    <h3>V4 hotend</h3><br>
                     <img class="pics zoom2" src="images/v4_lg.jpg" alt="V4 Hotend" data-zoom-image="images/v4_lg.jpg">
                 </div>
 
             </div>
             <div class="col-md-6">
                 <div class="center-text two-col-right">
-                    <h4>v3b hotend</h4><br>
+                    <h3>v3b hotend</h3><br>
                     <img class="pics zoom1" src="images/v3b_lg.jpg" alt="V3B Hotend"
                         data-zoom-image="images/v3b_lg.jpg">
                 </div>
             </div>
         </div>
-
-
         <div class="row center-text">
             <div class="col-md-12">
                 <select id="hotend" name="hotend">
@@ -325,7 +312,6 @@
                 <h2><strong>Select your LCD</strong></h2>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-4">
                 <div class="two-col-left center-text" id="viki-1">
@@ -348,7 +334,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row center-text">
             <select id="lcd" name="lcd">
 
@@ -360,14 +345,12 @@
                         <option value="geetech">Geeetech</option>
                     </div>
                 </div>
-
             </select>
         </div>
     </div>
     </div>
 
     <div id="arrows" class="selector">
-
         <center>
             <div class="arrow-pos-b" style="display: inline-block">
                 <h2><span id="back" onclick="move('back')" class="backArrow glyphicon glyphicon-arrow-left"
@@ -378,10 +361,7 @@
                         style="font-size: 150%"></span></h2>
             </div>
         </center>
-
     </div>
-
-
     <br>
     <br>
     <section class="step-background-1">
@@ -406,9 +386,6 @@
     <br>
     <br>
 
-
-
-
     <!--Import jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--Import elevate-zoom-->
@@ -417,6 +394,7 @@
     <script type="application/javascript" src="firmware.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 
     <script>
         window.onload = addEventListener;
