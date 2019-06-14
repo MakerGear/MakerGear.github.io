@@ -203,6 +203,12 @@ const revEdgt = [0, 0, 0, 1, 3];
 const sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
 const bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
 
+//black V4 dual
+const bv4dbm = [0, 0, 1, 1, 0]; //Base Model
+const bv4dv1 = [0, 0, 1, 1, 1]; //Viki1 not supported
+const bv4dv2 = [0, 0, 1, 1, 2]; //Viki2 not supported
+const bv4dgt = [0, 0, 1, 1, 3]; //Geetech not supported
+
 
 
 
@@ -261,7 +267,12 @@ function matchConfig() {
         revEdv2, //30
         revEdgt, //31
         sv4Zm, //32
-        bv3bgt //33
+        bv3bgt, //33
+        //black v4 dual Zmin
+        bv4dbm, //34
+        bv4dv1, //35
+        bv4dv2, //36
+        bv4dgt //37
     ];
 
     var match;
@@ -468,7 +479,7 @@ function matchConfig() {
         answer = confirm("Please click to download your firmware.");
         if (answer) {
             window.location =
-                "http://setup.makergear.com/misc/M2E-Production-nr1E2-V110.zip";
+                "http://makergear.wdfiles.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual.zip";
         } else answer = false;
     } else if (match == 29) {
         answer = confirm("Please click to download your firmware.");
@@ -502,8 +513,34 @@ function matchConfig() {
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         }
+    } else if (match == 34) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location =
+                "http://makergear.wdfiles.com/local--files/m2-firmware/M2_Dual_Extruder_Marlin_Black_Z_Motor.zip";
+        } else answer = false;
+    } else if (match == 35) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
+            );
+        }
+    } else if (match == 36) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
+            );
+        }
+    } else if (match == 37) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            alert(
+                "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
+            );
+        }
     }
-
 
 
 } //end matchconfig();
