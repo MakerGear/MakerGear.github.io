@@ -202,6 +202,7 @@ const revEdgt = [0, 0, 0, 1, 3];
 // Nonstandard configs
 const sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
 const bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
+const revEdSz = [1, 0, 0, 1, 0]; //revE dual silver Z
 
 //black V4 dual
 const bv4dbm = [0, 0, 1, 1, 0]; //Base Model
@@ -272,7 +273,8 @@ function matchConfig() {
         bv4dbm, //34
         bv4dv1, //35
         bv4dv2, //36
-        bv4dgt //37
+        bv4dgt, //37
+        revEdSz //38
     ];
 
     var match;
@@ -540,6 +542,12 @@ function matchConfig() {
                 "Hmmm. We can't find your firmware.. Please contact support.makergear.com and they may be able to help you. "
             );
         }
+    } else if (match == 38) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location =
+                "http://makergear.wikidot.com/local--files/m2-firmware/V4%20Dual%2C%20silver%20Z%20motor%2C%20Zmax";
+        } else answer = false;
     }
 
 
