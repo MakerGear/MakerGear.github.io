@@ -203,7 +203,8 @@ const revEdgt = [0, 0, 0, 1, 3];
 const sv4Zm = [1, 0, 0, 0, 0]; //Silver,V4,Zmax
 const bv3bgt = [0, 0, 1, 2, 3]; //Black,V3b,Geetech
 const revEdSz = [1, 0, 0, 1, 0]; //revE dual silver Z
-const revEdSzMin = [1, 0, 1, 1, 3] //revE dual silver Z min
+const revEdSzMin = [1, 0, 1, 1, 3]; //revE dual silver Z min
+const svv4zmxgt = [1, 0, 0, 0, 3]; //revE Silver.V4,Zmax Geeetech
 
 //black V4 dual
 const bv4dbm = [0, 0, 1, 1, 0]; //Base Model
@@ -276,7 +277,8 @@ function matchConfig() {
         bv4dv2, //36
         bv4dgt, //37
         revEdSz, //38
-        revEdSzMin //39
+        revEdSzMin, //39
+        svv4zmxgt //40 
     ];
 
     var match;
@@ -555,6 +557,12 @@ function matchConfig() {
         if (answer) {
             window.location =
                 "http://makergear.wikidot.com/local--files/m2-firmware/M2E-Production-SnNRd-V101%20-%20Dual_Silver_Zmin.zip";
+        } else answer = false;
+    } else if (match == 40) {
+        answer = confirm("Please click to download your firmware.");
+        if (answer) {
+            window.location =
+                "http://makergear.wikidot.com/local--files/m2-firmware/M2E-Production-SnNRd-V100_SilverZ.zip";
         } else answer = false;
     }
 
