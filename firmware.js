@@ -66,7 +66,7 @@ function v4Cool() {
 
     if (answer) {
         window.location =
-            "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG-cooling%20-upgrade.zip";
+            "http://makergear.wikidot.com/local--files/m2-firmware/V4-RevF%3AG%20-upgrade.zip";
     } else answer = false;
 }
 
