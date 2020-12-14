@@ -1,4 +1,5 @@
 /*css for main page */
+
 html {
     scroll-behavior: smooth;
 }
@@ -14,7 +15,6 @@ body {
 
 .link-hover:hover {
     color: #FF6300;
-
 }
 
 span:hover {
@@ -39,6 +39,7 @@ select {
     padding-bottom: 1px;
 }
 
+
 /*classes*/
 
 .logo {
@@ -62,7 +63,6 @@ select {
     color: #FF6300;
 }
 
-
 .header {
     text-align: center;
     font-family: 'Oswald', sans-serif;
@@ -72,7 +72,6 @@ select {
 .tutorial {
     text-align: center;
     padding: 10px;
-
 }
 
 .steps1 {
@@ -80,11 +79,9 @@ select {
     padding-bottom: 70px;
 }
 
-
 .center-text {
     text-align: center;
 }
-
 
 .pics {
     width: 170px;
@@ -93,7 +90,6 @@ select {
 }
 
 .pics2 {
-
     width: 290px;
     height: 140px;
     padding: 10px;
@@ -104,7 +100,6 @@ select {
 }
 
 .selector {
-
     padding-bottom: 50px;
 }
 
@@ -117,7 +112,6 @@ select {
 }
 
 .links {
-
     background-color: whitesmoke;
     padding: 10px;
 }
@@ -137,7 +131,6 @@ select {
 
 .arrow-pos-b {
     padding-right: 10px;
-
 }
 
 .arrow-pos-f {
@@ -154,6 +147,9 @@ select {
     padding-left: 1%;
 }
 
+#text-padding-row1 {
+    padding-top: 10px;
+}
 
 #endstop-align-bottom {
     padding-left: 15px;
@@ -181,27 +177,21 @@ select {
 }
 
 
-
 /*media queries*/
 
 @media only screen and (max-width: 991px) {
-
     #ard1 {
         padding-left: 1%;
     }
-
     #ard3 {
         padding-right: 1%;
     }
-
     .two-col-left {
         float: none;
         padding: .02%;
     }
-
     .two-col-right {
         float: none;
         padding: .02%;
     }
-
 }

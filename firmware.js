@@ -79,7 +79,7 @@ function arduino() {
 
     if (answer) {
         window.location =
-            "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-r2-windows.zip";
+            "https://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x";
     } else answer = false;
 }
 
@@ -92,7 +92,7 @@ function arduino2() {
 
     if (answer) {
         window.location =
-            "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-macosx.zip";
+            "https://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x";
     } else answer = false;
 }
 
@@ -105,7 +105,7 @@ function arduino3() {
 
     if (answer) {
         window.location =
-            "https://www.arduino.cc/download_handler.php?f=/arduino-1.5.5-linux64.tgz";
+            "https://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x";
     } else answer = false;
 }
 
